@@ -52,7 +52,8 @@ namespace WordFinder.Services
                 {
                     (string Word, int Count) record = (x, await FindWordAsync(x));
                     return record;
-                });
+                })
+                .ToArray();
 
             // Here we wait for all tasks to be completed
             var result = Task.WhenAll(tasks)
