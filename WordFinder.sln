@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WordFinder.Services", "src\WordFinder.Services\WordFinder.Services.csproj", "{893EF32A-9CE4-49C8-846E-CDD759921AA4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Application", "1. Application", "{E3497811-878C-4F80-A2ED-DEB81A882084}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Tests", "2. Tests", "{B78BA04A-7431-4960-B6E6-9C169CBBA5B1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WordFinder.Services.UnitTests", "tests\WordFinder.Services.UnitTests\WordFinder.Services.UnitTests.csproj", "{16B1AC2D-9354-497D-A25D-C24C5098FA99}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordFinder.Api", "src\WordFinder.Api\WordFinder.Api.csproj", "{38825009-F795-4911-B100-24DCD67DF04B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{893EF32A-9CE4-49C8-846E-CDD759921AA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{893EF32A-9CE4-49C8-846E-CDD759921AA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{893EF32A-9CE4-49C8-846E-CDD759921AA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{893EF32A-9CE4-49C8-846E-CDD759921AA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16B1AC2D-9354-497D-A25D-C24C5098FA99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16B1AC2D-9354-497D-A25D-C24C5098FA99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16B1AC2D-9354-497D-A25D-C24C5098FA99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16B1AC2D-9354-497D-A25D-C24C5098FA99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38825009-F795-4911-B100-24DCD67DF04B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38825009-F795-4911-B100-24DCD67DF04B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38825009-F795-4911-B100-24DCD67DF04B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38825009-F795-4911-B100-24DCD67DF04B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{893EF32A-9CE4-49C8-846E-CDD759921AA4} = {E3497811-878C-4F80-A2ED-DEB81A882084}
+		{16B1AC2D-9354-497D-A25D-C24C5098FA99} = {B78BA04A-7431-4960-B6E6-9C169CBBA5B1}
+		{38825009-F795-4911-B100-24DCD67DF04B} = {E3497811-878C-4F80-A2ED-DEB81A882084}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5D972847-A742-4F87-A74B-A8C03E0D8288}
+	EndGlobalSection
+EndGlobal
