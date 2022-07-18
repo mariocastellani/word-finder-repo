@@ -43,26 +43,11 @@ namespace WordFinder.Services
             if (wordStream == null || !_matrix.Any())
                 return Enumerable.Empty<string>();
 
-            // Here we take advantage of Linq and async
-            // (each word is searched in async way)
-            var tasks = wordStream
+            // Here we take advantage of Linq
+            return wordStream
                 .Distinct()
                 .Where(x => !string.IsNullOrWhiteSpace(x))
-                .Select(async x =>
-                {
-                    (string Word, int Count) record = (x, await FindWordAsync(x));
-                    return record;
-                })
-                .ToArray();
-
-            // Here we wait for all tasks to be completed
-            var result = Task.WhenAll(tasks)
-                .ConfigureAwait(false)
-                .GetAwaiter()
-                .GetResult(); 
-            
-            // Return just the TOP 10
-            return result 
+                .Select(x => (Word: x, Count: FindWord(x)))
                 .Where(x => x.Count > 0)
                 .OrderByDescending(x => x.Count).ThenBy(x => x.Word)
                 .Take(10)
@@ -70,7 +55,7 @@ namespace WordFinder.Services
                 .ToArray();
         }
 
-        private Task<int> FindWordAsync(string word)
+        private int FindWord(string word)
         {
             int count = 0;
 
@@ -82,7 +67,7 @@ namespace WordFinder.Services
             count += _transposed.Aggregate(0, (acc, row) =>
                 acc += Regex.Matches(row, $"({word})").Count);
 
-            return Task.FromResult(count);
+            return count;
         }
     }
 }
